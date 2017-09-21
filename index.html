@@ -2,9 +2,441 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>忻州</title>
+	<title>忻州校区</title>
+	<link rel="stylesheet" href="index.css">
+
+	<!-- 照片的操作 -->
+	<link href="index1.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+
+    
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-	zheshi 
+<!-- 导航 -->
+<nav>
+	<ul class="claer">
+		<li><a href="#top">首页</a></li>
+		<li><a href="#class">班级相册</a></li>
+		<li>
+			<a href="#">
+				<img src="images/avatar.jpg" alt="">
+			</a>
+		</li>
+		<li><a href="#work">作品展示</a></li>
+		<li><a href="#link">友情链接</a></li>
+	</ul>
+</nav>
+<!-- 首页  -->
+<div id="top">
+	<p>
+		天 行 健 君 子 以 自 强 不 息！<br>
+		地 势 坤 君 子 以 厚 德 载 物！
+	</p>
+</div>
+<!-- 关于我们 -->
+<!-- <div id="about">
+	<ul>
+		<li>天行健，君子以自强不息；地势坤，君子以厚德载物。</li>
+		<li>再完美的计划, 都不如不完美的一步行动。</li>
+		<li>拳不离手，曲不离口！</li>
+	</ul>
+</div> -->
+<!-- 班级相册 -->
+<div id="class">
+    <script>
+        function Showbigimg() {
+            var rom = parseInt(29 * Math.random());
+
+            var imgurl = $(".zppic:eq(" + rom + ")").find("img").attr("src");
+            $(".bigimg").attr({ "src": imgurl });
+
+            var bwidth = $(".bigimg").width();
+            var bheight = $(".bigimg").height();
+            var o = { left: "20%",right: "20%", width: "60%",top: "15%",zIndex:"9999"};
+
+            var pic = $(".zppic:eq(" + rom + ")");
+            $(".bigpic").css({ "left": pic.position().left, "top": pic.position().top });
+            $(".bigpic").show();
+
+            $(".bigpic").animate(o, 2000, function () {
+                setTimeout(function () {
+                    $(".bigpic").animate({ width: "100px", left: pic.position().left, top: pic.position().top, "margin-left": "0", "margin-top": "0" }, 1000, function () {
+                        $(".bigpic").hide();
+                        setTimeout(Showbigimg, 1000);
+                    });
+                }, 3000)
+            });
+        }
+
+        $(function () {
+            Showbigimg();         
+
+        })
+    </script>
+	<div class="zp">
+        <table>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                </td>
+                <td colspan="2">
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <!--1行 结束-->
+            <tr>
+                <td></td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <!--2行 结束-->
+            <tr>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+            </tr>
+            <!--3行 结束-->
+            <tr>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+            </tr>
+            <!--4行 结束-->
+            <tr>
+                <td></td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <!--5行 结束-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!--6行 结束-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="zppic">
+                        <img src="images/1.jpg" />
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!--2行 结束-->
+        </table>
+        <div class="bigpic" style="display: none;">
+            <img class="bigimg" src="" />
+        </div>
+    </div>
+</div>
+<!-- 作品展示 -->
+<div id="work">
+	<ul>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>杜晓琴</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>胡潇文</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>陈滨</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>王禹皓</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>赵云</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>索雯卿</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>索成伟</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>赵灏伟</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>常浩</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>陈榕</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>张倩</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>刘一凝</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>赵桐华</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>刘永军</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>常凯军</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>陈之清</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>张浩</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>史博文</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>郭永杰</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>孙艳静</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>段占姣</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>段雪洁</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>郝惠聪</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>陈文刚</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>段金龙</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>冯锦江</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="images/avatar.jpg">
+                <p>段燊宏</p>
+                <img src="images/1.jpg" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- 友情链接 -->
+<div id="link">
+	这里是友情链接
+</div>
 </body>
 </html>

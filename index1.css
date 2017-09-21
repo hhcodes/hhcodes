@@ -1,0 +1,10 @@
+#class {height: 638px;position: relative; overflow:hidden;}
+.zp { width: 100%;height:100%;text-align:center; }
+.zppic { display: inline-block; max-width: 120px; max-height: 120px;}
+.zppic img { width: 100%; }
+
+
+.bigpic { position: absolute; overflow: hidden; z-index: 99; }
+.bigpic img { width: 100%; }
+
+table { width:100%;margin-top: 80px;}
